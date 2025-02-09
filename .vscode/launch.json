@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "firebase1",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "Pixel_3"
+        },
+        {
+            "name": "firebase1 (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "deviceId": "Pixel_3"
+        },
+        {
+            "name": "firebase1 (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "deviceId": "Pixel_3"
+        }
+    ]
+}

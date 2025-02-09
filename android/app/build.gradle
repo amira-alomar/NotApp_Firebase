@@ -1,0 +1,41 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+apply plugin: 'com.google.gms.google-services' // Apply the Google services plugin
+
+android {
+    namespace = "com.example.firebase1"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.firebase1" // Your app's unique identifier
+        minSdkVersion 23 // Set the minSdkVersion to 23 manually
+        targetSdkVersion flutter.targetSdkVersion // Keep the targetSdkVersion dynamic based on Flutter's settings
+        versionCode flutter.versionCode // Version code for your app
+        versionName flutter.versionName // Version name for your app
+    }
+
+    buildTypes {
+        release {
+            // For now, signing with debug keys to allow 'flutter run --release'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."  // Path to the Flutter SDK (relative)
+}
